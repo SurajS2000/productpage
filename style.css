@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body{
+    font-family: 'Inter', sans-serif;
+}
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    height: 100dvh;
+    gap: 50px;
+    padding: 75px;
+}
+.mainimg {
+    width: 400px;
+    height: 500px;
+}
+.imgcontainer{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.imgcontainer img{
+    border: 2px solid darkslateblue;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+.name{
+    font-size: small;
+    color: rgb(156, 156, 156);
+}
+h1{
+    font-size: larger;
+}
+.section{
+    padding-block: 10px;
+    border-bottom: 1px solid rgb(213, 213, 213);
+}
+.price{
+    font-size: x-large;
+    font-weight: 800;
+    margin-right: 8px;
+    color: darkslateblue;
+}
+.pridiv{
+    display: flex;
+    align-items: center;
+}
+.perct{
+    color: rgb(245, 32, 32);
+}
+.orgprice{
+    margin-top: 5px;
+    color: rgb(97, 97, 97);
+    text-decoration: line-through;
+}
+.outer{
+    height: 35px;
+    width: 35px;
+    padding: 2px;
+}
+.colorsec{
+    margin-top: 5px;
+    display: flex;
+    gap: 5px;
+}
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+.sizsec{
+    margin-top: 5px;
+    display: flex;
+    font-size: small;
+    gap: 5px;
+}
+.sizdiv{
+    display: flex;
+    padding: 5px;
+    text-wrap: nowrap;
+    background-color: rgb(232, 232, 232);
+    gap: 5px;
+    border-radius: 5px;
+    align-items: center;
+}
+.outercic{
+    width: 13px;
+    height: 13px;
+    border: 1px solid darkslateblue;
+    border-radius: 100%;
+    padding: 1px;
+}
+.innercic{
+    height: 100%;
+    border-radius: 100%;
+    background-color: darkslateblue;
+}
+.pursec{
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+.addsec{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(232, 232, 232);
+    border-radius: 20px;
+    font-size: 10px;
+    color: darkslateblue;
+}
+.addsec span{
+    font-size: small;
+    font-weight: 800;
+}
+.cart{
+    padding-block: 10px;
+    padding-inline: 40px;
+    background-color: darkslateblue;
+    color: white;
+    border-radius: 20px;
+    font-size: small;
+}
+.alert{
+    margin-top: 20px;
+    width: fit-content;
+    padding-block: 3px;
+    padding-inline: 10px;
+    border-radius: 5px;
+    background-color: greenyellow;
+    font-size: small;
+}
+.description{
+    margin-top: 25px;
+    margin-right: 10px;
+    color: rgb(156, 156, 156);
+}
+@media screen and (max-width:1024px) {
+    .maincontainer{
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    }
+    .container1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mainimgcont{
+        width: 100%;
+        display: flex;
+        justify-content:center
+    }
+    
+}
+@media screen and (max-width:767px) {
+    .maincontainer{
+        padding: 10px;
+    }
+}
+
+
+
