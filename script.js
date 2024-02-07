@@ -12,8 +12,12 @@ const description = document.querySelector(".description");
 const add = document.getElementById('add');
 const minus = document.getElementById('minus');
 const num =document.querySelector('.num');
+const cart = document.querySelector('.cart');
+const message = document.querySelector('.alert');
 let color;
 let itemnum=1;
+let size;
+let product;
 add.addEventListener('click',function(){
   num.innerHTML=++itemnum;
 })
@@ -22,6 +26,14 @@ minus.addEventListener('click',function(){
     num.innerHTML=--itemnum;
   }
 },)
+cart.addEventListener('click',()=>{
+  if(color&&size){
+    console.log(color)
+    message.innerText=`${product} with color ${color} and size ${size} added to cart`
+  }else{
+    alert("more option to fill")
+  }
+})
 
 function addeventi(button){
   button.addEventListener('click',function(e){
@@ -29,10 +41,11 @@ function addeventi(button){
     mainimage.src=img
   })
 }
-function addeventc(button){
-  button.addEventListener('click',function(e){
-    console.log(e.target)
-  })
+function setcolor(value){
+  color=value;
+}
+function setsize(value){
+  size=value;
 }
 for(i=0;i<4;i++){
   addeventi(secimag[i])
@@ -44,7 +57,8 @@ window.addEventListener("load", async () => {
   let a = data.product.price;
   let b = data.product.compare_at_price;
   let c = b.replace("$", "") - a.replace("$", "");
-  productname.innerText = data.product.title;
+  product=data.product.title
+  productname.innerText = product;
   price.innerText = a + ".00";
   orginalprice.innerText = b + ".00";
   perct.innerHTML = Math.round((c / b.replace("$", "")) * 100);
@@ -53,9 +67,7 @@ window.addEventListener("load", async () => {
   colorsection.innerHTML = color.map((data,id) => {
     for (let [key, value] of Object.entries(data)) {
         return`
-        <div style="border-color: ${value};" id="${key}" class="outer">
-        <div style="background-color: ${value};" class="inner"><i class="fa-solid fa-check"></i></div>
-      </div>
+        <input onclick='setcolor(value)' style="accent-color='${value}'" name='color' type='radio' value=${key} />
       `
     }
   })
@@ -64,13 +76,9 @@ window.addEventListener("load", async () => {
   sizesection.innerHTML = size.map((data)=>{
     return`
     <div class='sizdiv'>
-    <input name='size' type='radio'/>
+    <input onclick='setsize(value)' value=${data} name='size' type='radio'/>
     <label>${data}</label>
     </div>`
   })
   .join("")
-  const coldiv= document.querySelectorAll(".outer")
-    for(i=0;i<4;i++){
-      addeventc(coldiv[i])
-    }
 });

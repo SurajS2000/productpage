@@ -94,6 +94,9 @@ h1{
     border-radius: 5px;
     align-items: center;
 }
+input[type='radio']:checked{
+    accent-color: #483d8b;
+}
 .pursec{
     display: flex;
     gap: 15px;
@@ -121,11 +124,12 @@ h1{
     border-radius: 20px;
     font-size: small;
 }
+.cart:hover{
+    cursor: pointer;
+}
 .alert{
     margin-top: 20px;
     width: fit-content;
-    padding-block: 3px;
-    padding-inline: 10px;
     border-radius: 5px;
     background-color: greenyellow;
     font-size: small;
