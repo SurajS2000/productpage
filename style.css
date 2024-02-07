@@ -91,6 +91,7 @@ h1{
 .sizsec{
     margin-top: 5px;
     display: flex;
+    flex-wrap: wrap;
     font-size: small;
     gap: 5px;
 }
