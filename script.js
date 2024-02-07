@@ -63,10 +63,10 @@ window.addEventListener("load", async () => {
   let size = data.product.options[1].values;
   sizesection.innerHTML = size.map((data)=>{
     return`
-    <div class="sizdiv">
-    <div class="outercic"><div class="innercic"></div></div>
-    <span>${data}</span>
-  </div>`
+    <div class='sizdiv'>
+    <input name='size' type='radio'/>
+    <label>${data}</label>
+    </div>`
   })
   .join("")
   const coldiv= document.querySelectorAll(".outer")

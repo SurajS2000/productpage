@@ -94,18 +94,6 @@ h1{
     border-radius: 5px;
     align-items: center;
 }
-.outercic{
-    width: 13px;
-    height: 13px;
-    border: 1px solid darkslateblue;
-    border-radius: 100%;
-    padding: 1px;
-}
-.innercic{
-    height: 100%;
-    border-radius: 100%;
-    background-color: darkslateblue;
-}
 .pursec{
     display: flex;
     gap: 15px;
