@@ -70,7 +70,7 @@ window.addEventListener("load", async () => {
         return`
             <div>
               <input onclick="setcolor(value)" class="colorbutton" id=${key} name="color" type="radio">
-              <label for=${key}>
+              <label for=${key} class=${key}>
                 <div class="outer" style="border-color: ${value};">
                   <div class="inner" style="background-color: ${value};">
                     <i class="fa-solid fa-check"></i>

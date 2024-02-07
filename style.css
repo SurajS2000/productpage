@@ -79,6 +79,15 @@ h1{
     width: 100%;
     height: 100%;
 }
+.inner i{
+    display: none;
+}
+.colorbutton:checked+label .outer{
+    border: 2px solid;
+}
+.colorbutton:checked+label .outer .inner i{
+    display: block;
+}
 .sizsec{
     margin-top: 5px;
     display: flex;
