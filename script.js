@@ -69,7 +69,7 @@ window.addEventListener("load", async () => {
     for (let [key, value] of Object.entries(data)) {
         return`
             <div>
-              <input onclick="setcolor(value)" class="colorbutton" id=${key} name="color" type="radio">
+              <input onclick="setcolor(value)" value=${key} class="colorbutton" id=${key} name="color" type="radio">
               <label for=${key}>
                 <div class="outer" style="border-color: ${value};">
                   <div class="inner" style="background-color: ${value};">
