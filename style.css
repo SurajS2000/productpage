@@ -94,7 +94,10 @@ h1{
     border-radius: 5px;
     align-items: center;
 }
-input[type='radio']:checked{
+.colorbutton{
+ display: none;
+}
+.sizebutton:checked{
     accent-color: #483d8b;
 }
 .pursec{

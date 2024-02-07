@@ -43,6 +43,7 @@ function addeventi(button){
 }
 function setcolor(value){
   color=value;
+  console.log(color)
 }
 function setsize(value){
   size=value;
@@ -67,7 +68,16 @@ window.addEventListener("load", async () => {
   colorsection.innerHTML = color.map((data,id) => {
     for (let [key, value] of Object.entries(data)) {
         return`
-        <input onclick='setcolor(value)' style="accent-color='${value}'" name='color' type='radio' value=${key} />
+            <div>
+              <input onclick="setcolor(value)" class="colorbutton" id=${key} name="color" type="radio">
+              <label for=${key}>
+                <div class="outer" style="border-color: ${value};">
+                  <div class="inner" style="background-color: ${value};">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </label>
+            </div>
       `
     }
   })
@@ -76,7 +86,7 @@ window.addEventListener("load", async () => {
   sizesection.innerHTML = size.map((data)=>{
     return`
     <div class='sizdiv'>
-    <input onclick='setsize(value)' value=${data} name='size' type='radio'/>
+    <input class='sizebutton' onclick='setsize(value)' value=${data} name='size' type='radio'/>
     <label>${data}</label>
     </div>`
   })
